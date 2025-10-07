@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Unclic.tech - Soluciones de automatización con bots de WhatsApp y asistentes de voz inteligentes con LiveKit">
+    <meta name="keywords" content="bots whatsapp, asistentes voz, livekit, automatización, inteligencia artificial">
+    <title>Unclic.tech - Bots de WhatsApp y Asistentes de Voz</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Navigation */
+        nav {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 1rem 0;
+        }
+
+        nav li {
+            margin: 0 1.5rem;
+        }
+
+        nav a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #764ba2;
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 0;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #667eea;
+            text-align: center;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            text-align: center;
+            padding: 5rem 0;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .service-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .service-card p {
+            color: #555;
+        }
+
+        /* Contact */
+        .contact-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-info p {
+            margin: 1rem 0;
+            font-size: 1.1rem;
+        }
+
+        .contact-info strong {
+            color: #667eea;
+        }
+
+        /* Legal */
+        .legal {
+            background: #f5f7fa;
+        }
+
+        .legal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .legal-content h3 {
+            color: #667eea;
+            margin: 1.5rem 0 1rem;
+        }
+
+        .legal-content ul {
+            margin-left: 2rem;
+            color: #555;
+        }
+
+        .legal-content li {
+            margin: 0.5rem 0;
+        }
+
+        /* Footer */
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🚀 Unclic.tech</h1>
+            <p>Automatización Inteligente con Bots de WhatsApp y Asistentes de Voz</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#privacidad">Privacidad</a></li>
+            <li><a href="#terminos">Términos</a></li>
+        </ul>
+    </nav>
+
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h2>Transformamos tu negocio con tecnología de vanguardia</h2>
+            <p>Desarrollamos soluciones de automatización inteligente mediante bots de WhatsApp y asistentes de voz basados en LiveKit. Mejoramos la comunicación con tus clientes las 24 horas del día.</p>
+        </div>
+    </section>
+
+    <section id="servicios">
+        <div class="container">
+            <h2>Nuestros Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>💬 Bots de WhatsApp</h3>
+                    <p>Desarrollamos bots inteligentes para WhatsApp que automatizan la atención al cliente, responden preguntas frecuentes, procesan pedidos y mejoran la experiencia de tus usuarios.</p>
+                </div>
+                <div class="service-card">
+                    <h3>🎙️ Asistentes de Voz</h3>
+                    <p>Creamos asistentes de voz conversacionales con tecnología LiveKit, permitiendo interacciones naturales y fluidas en tiempo real con tus clientes.</p>
+                </div>
+                <div class="service-card">
+                    <h3>🤖 Integración IA</h3>
+                    <p>Integramos inteligencia artificial avanzada en tus sistemas de comunicación para ofrecer respuestas contextuales y personalizadas.</p>
+                </div>
+                <div class="service-card">
+                    <h3>⚙️ Automatización</h3>
+                    <p>Automatizamos procesos de negocio mediante flujos de trabajo inteligentes, reduciendo costos operativos y mejorando la eficiencia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="nosotros">
+        <div class="container">
+            <h2>Sobre Nosotros</h2>
+            <div class="contact-info">
+                <p>Unclic.tech es una empresa especializada en desarrollo de soluciones de automatización inteligente. Nos enfocamos en crear experiencias conversacionales excepcionales mediante bots de WhatsApp y asistentes de voz.</p>
+                <p>Nuestro equipo cuenta con amplia experiencia en tecnologías como LiveKit, inteligencia artificial y procesamiento de lenguaje natural, permitiéndonos ofrecer soluciones innovadoras y efectivas.</p>
+                <p><strong>Misión:</strong> Democratizar el acceso a tecnología de automatización inteligente para empresas de todos los tamaños.</p>
+                <p><strong>Visión:</strong> Ser líderes en soluciones conversacionales impulsadas por IA en América Latina.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <div class="container">
+            <h2>Contacto</h2>
+            <div class="contact-info">
+                <p><strong>Empresa:</strong> Unclic.tech</p>
+                <p><strong>Email:</strong> marcos076@yahoo.com</p>
+                <p><strong>Soporte:</strong> marcos076@yahoo.com</p>
+                <p><strong>WhatsApp:</strong> +502 3443 2011</p>
+                <p><strong>Horario:</strong> Lunes a Viernes, 9:00 AM - 6:00 PM</p>
+                <p>¿Tienes un proyecto en mente? Contáctanos y te ayudaremos a automatizar tu negocio.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="privacidad" class="legal">
+        <div class="container">
+            <h2>Política de Privacidad</h2>
+            <div class="legal-content">
+                <p><strong>Última actualización:</strong> Octubre 2025</p>
+                
+                <h3>1. Información que Recopilamos</h3>
+                <p>En Unclic.tech recopilamos la siguiente información:</p>
+                <ul>
+                    <li>Información de contacto (nombre, email, teléfono)</li>
+                    <li>Información de uso de nuestros servicios</li>
+                    <li>Datos de conversaciones con nuestros bots (con tu consentimiento)</li>
+                </ul>
+
+                <h3>2. Uso de la Información</h3>
+                <p>Utilizamos tu información para:</p>
+                <ul>
+                    <li>Proporcionar y mejorar nuestros servicios</li>
+                    <li>Comunicarnos contigo sobre tu cuenta o servicios</li>
+                    <li>Enviar actualizaciones sobre nuestros productos</li>
+                    <li>Cumplir con obligaciones legales</li>
+                </ul>
+
+                <h3>3. Protección de Datos</h3>
+                <p>Implementamos medidas de seguridad técnicas y organizativas para proteger tu información personal contra acceso no autorizado, pérdida o alteración.</p>
+
+                <h3>4. Compartir Información</h3>
+                <p>No vendemos ni compartimos tu información personal con terceros, excepto cuando sea necesario para proporcionar nuestros servicios o cuando lo requiera la ley.</p>
+
+                <h3>5. Tus Derechos</h3>
+                <p>Tienes derecho a:</p>
+                <ul>
+                    <li>Acceder a tu información personal</li>
+                    <li>Corregir datos inexactos</li>
+                    <li>Solicitar la eliminación de tus datos</li>
+                    <li>Oponerte al procesamiento de tus datos</li>
+                </ul>
+
+                <h3>6. Cookies</h3>
+                <p>Utilizamos cookies para mejorar tu experiencia en nuestro sitio web. Puedes configurar tu navegador para rechazar cookies.</p>
+
+                <h3>7. Contacto</h3>
+                <p>Para preguntas sobre privacidad, contáctanos en: marcos076@yahoo.com</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="terminos" class="legal">
+        <div class="container">
+            <h2>Términos y Condiciones</h2>
+            <div class="legal-content">
+                <p><strong>Última actualización:</strong> Octubre 2025</p>
+
+                <h3>1. Aceptación de Términos</h3>
+                <p>Al utilizar los servicios de Unclic.tech, aceptas estos términos y condiciones. Si no estás de acuerdo, no utilices nuestros servicios.</p>
+
+                <h3>2. Servicios</h3>
+                <p>Unclic.tech ofrece servicios de desarrollo de bots para WhatsApp y asistentes de voz. Nuestros servicios incluyen:</p>
+                <ul>
+                    <li>Desarrollo de bots personalizados</li>
+                    <li>Implementación de asistentes de voz con LiveKit</li>
+                    <li>Integración con sistemas existentes</li>
+                    <li>Soporte técnico y mantenimiento</li>
+                </ul>
+
+                <h3>3. Uso Aceptable</h3>
+                <p>Al usar nuestros servicios, te comprometes a:</p>
+                <ul>
+                    <li>No usar nuestros servicios para actividades ilegales</li>
+                    <li>No enviar spam o contenido no solicitado</li>
+                    <li>Respetar las políticas de WhatsApp y otras plataformas</li>
+                    <li>No intentar vulnerar la seguridad de nuestros sistemas</li>
+                </ul>
+
+                <h3>4. Propiedad Intelectual</h3>
+                <p>Todo el contenido, código y tecnología desarrollada por Unclic.tech está protegida por derechos de autor. El cliente recibe una licencia de uso, pero la propiedad intelectual permanece con Unclic.tech, salvo acuerdo contrario.</p>
+
+                <h3>5. Pagos y Facturación</h3>
+                <p>Los servicios se facturan según lo acordado en el contrato de servicio. Los pagos deben realizarse según los términos especificados. El incumplimiento puede resultar en la suspensión del servicio.</p>
+
+                <h3>6. Garantías y Limitaciones</h3>
+                <p>Nos esforzamos por proporcionar servicios de alta calidad, pero no garantizamos que estarán libres de errores. Nuestra responsabilidad se limita al monto pagado por el servicio.</p>
+
+                <h3>7. Terminación</h3>
+                <p>Cualquiera de las partes puede terminar el servicio según lo establecido en el contrato. En caso de violación de estos términos, podemos suspender o terminar tu acceso inmediatamente.</p>
+
+                <h3>8. Modificaciones</h3>
+                <p>Nos reservamos el derecho de modificar estos términos. Los cambios se notificarán con anticipación razonable.</p>
+
+                <h3>9. Ley Aplicable</h3>
+                <p>Estos términos se rigen por las leyes aplicables en la jurisdicción donde operamos.</p>
+
+                <h3>10. Contacto</h3>
+                <p>Para preguntas sobre estos términos, contáctanos en: marcos076@yahoo.com</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Unclic.tech - Todos los derechos reservados</p>
+            <p>Email: marcos076@yahoo.com | WhatsApp: +502 3443 2011</p>
+            <p>Desarrollamos bots de WhatsApp y asistentes de voz con LiveKit</p>
+        </div>
+    </footer>
+</body>
+</html>
